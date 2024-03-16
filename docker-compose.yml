@@ -1,0 +1,29 @@
+version: '3'
+services:
+  devops:
+    image: gsandeep8367/paymovies:latest
+    ports:
+      - "90:80"
+    deploy:
+      replicas: 3
+
+  aws:
+    image: gsandeep8367/paytrain:latest
+    ports:
+      - "91:80"
+    deploy:
+      replicas: 3
+
+  datascience:
+    image: gsandeep8367/paydth:latest
+    ports:
+      - "92:80"
+    deploy:
+      replicas: 3
+
+  azure:
+    image: gsandeep8367/recharge:latest
+    ports:
+      - "93:80"
+    deploy:
+      replicas: 3
